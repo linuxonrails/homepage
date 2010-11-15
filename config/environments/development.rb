@@ -21,6 +21,8 @@ Homepage::Application.configure do
   config.active_support.deprecation = :log
 
   # Only use best-standards-support built into browsers
-  config.action_dispatch.best_standards_support = :builtin
+  config.action_dispatch.best_standards_suppo rt = :builtin
 end
+
+APP_URL = "http://localhost:3000"
 

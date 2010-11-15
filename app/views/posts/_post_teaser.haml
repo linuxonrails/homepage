@@ -1,0 +1,14 @@
+%article
+  %h2
+    = post.title
+      
+  .any
+    %span.author
+      by
+      = # post.author.name
+    %span.published_on
+      on
+      = # post.published_on.strftime("%b %d, %Y") 
+      
+  %p.teaser
+    = # post.teaser

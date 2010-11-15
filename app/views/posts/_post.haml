@@ -1,0 +1,14 @@
+%article
+  %h2
+    = link_to post.title, post
+    %em
+      %span.author
+        by
+        = post.author.name
+      %span.published_on
+        on
+        = post.published_on.strftime("%b %d, %Y") 
+      
+  %p.post-body
+    = post.body[0..50]
+    \...

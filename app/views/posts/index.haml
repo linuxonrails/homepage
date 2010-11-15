@@ -1,0 +1,8 @@
+
+- @title = "New title"
+   
+- unless @posts.any?
+  No post yet :-/  
+- else   
+  %ul
+    = render :collection => @posts, :partial => 'post'
