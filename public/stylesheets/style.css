@@ -153,6 +153,7 @@ a:link, a:visited {
 
 a:hover {
   text-decoration:none;
+  color: red;
 }
 
 a img {
@@ -167,7 +168,7 @@ a img {
 
 #container {
   text-align:left;
-  width:760px;
+  width:910px;
   margin:0 auto;
   padding:0 10px;
   border-left:10px solid #EEEEEE;
@@ -182,12 +183,12 @@ a img {
 
 #content {
   padding:0 15px;
-  width:495px;
+  width:595px;
   float:right;
 }
 
 #sidebox {
-  width:235px;
+  width:285px;
   float:left;
   border-bottom:5px solid #CC0000;
   padding-bottom:20px;
@@ -225,6 +226,10 @@ ul.links li a:hover {
   background-color:#CC0000;
 }
 
+#header a:hover {
+  color: black;
+}
+
 h1 {
   font-size:220%;
   margin:0; padding:0;
@@ -235,6 +240,11 @@ h1 {
 
 h1 span {
   color:#FFFFFF;
+}
+
+h1 a {
+  color: white !important;
+  text-transform: none !important;
 }
 
 #top {
@@ -340,6 +350,6 @@ h1 span {
   color:#DDDDDD;
 }
 #top a:hover, #footer a:hover {
-  color:#999999;
+  color:red; /* #999999; */
 }
 

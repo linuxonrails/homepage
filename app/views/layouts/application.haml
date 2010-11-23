@@ -5,13 +5,25 @@
     %title
       Linux on Rails
     
-    %meta{:name => 'description', :content => 'Blog by David Moreno: Ruby on Rails Programmer'}
-    %meta{:name => 'author',      :content => 'David Moreno'}
-    %meta{:name => 'Copyright',   :content => 'Copyright Your Name Here 2010. All Rights Reserved.'}
+    %meta{:name => 'description',     :content => 'Blog by David Moreno: Ruby on Rails Programmer'}
+    %meta{:name => 'author',          :content => 'David Moreno'}
+    %meta{:name => 'Copyright',       :content => 'Copyright Your Name Here 2010. All Rights Reserved.'}
+    
+    %meta{:name => 'Classification',  :content => 'webdeveloper homepage'}
+    %meta{:name => 'Keywords',        :content => 'Ruby on Rails RoR Linux David Moreno Webdeveloper Homepage'}
 
-    %meta{:name => 'DC.title',    :content => 'Linux on Rails Homepage'}
-    %meta{:name => 'DC.subject',  :content => 'Rubist, Programmer, Linuxfan.'}
-    %meta{:name => 'DC.creator',  :content => 'David Moreno.'}
+    %meta{:name => 'Geography',     :content => 'España'}
+    %meta{:name => 'Language',      :content => 'English'}
+    %meta{:name => 'Expires',       :content => 'never'}
+    %meta{:name => 'Revisit-After', :content => '7 days'}
+    %meta{:name => 'distribution',  :content => 'Global'}
+    %meta{:name => 'Robots',        :content => 'INDEX,FOLLOW'}
+    %meta{:name => 'country',       :content => 'Spain'}
+
+
+    %meta{:name => 'DC.title',        :content => 'Linux on Rails Homepage'}
+    %meta{:name => 'DC.subject',      :content => 'Rubist, Programmer, Linuxfan.'}
+    %meta{:name => 'DC.creator',      :content => 'David Moreno.'}
   
     / don't forget to set your site up: http://google.com/webmasters
     %meta{:name => 'google-site-verification', :content => ''}
@@ -62,18 +74,19 @@
       #header
         - if true # %header
           %h1
-            %a{:href => root_path} 
+            %a{:href => root_path}<
               Linux on Rails
+            
             
             - unless @title.blank?
               %span
-                »
-                = @title
+                ·
+                = link_to @title, ''
 
           - if true # %nav
             %ul.inline#nav
               %li
-                %a{:href => '/'}
+                %a.currentpage{:href => '/'}
                   Home
               %li
                 %a{:href => '/blog'}
@@ -90,7 +103,8 @@
       
       %ul#subnav
         %li
-          Subopción1
+          %a{:href => '/'}
+            Subopción1
         %li
           Subopción2
         %li
@@ -120,6 +134,13 @@
           = yield
         
         #sidebox
+          %h3
+            Me
+            
+          %a.my-photo-link{:href => '/about', :title => "Yes, I am this person."}
+            %img.myphoto{:src => '/photos/me.jpg'}
+   
+        
           %h3
             Last tweets
           %ul.links
@@ -154,21 +175,23 @@
         /    Sidebar Content
   
 
-      / %footer#footer
-      #footer
-        %p
-          %stroke
-            &copy;
-          Copyleft David Moreno 2010. No Rights Reserved.
-          = link_to "Linuxonrails.com", 'http://www.linuxonrails.com'
-          %br
-          Valid
-          %a{:href => "http://validator.w3.org/check?uri=referer", :target => "_blank"}
-            XHTML
-          and
-          %a{:href => "http://jigsaw.w3.org/css-validator/check/referer", :target => "_blank"}
-            CSS
-          · Template design by 
-          %a{:href => "http://www.opendesigns.org/profile/?user=ad267"}
-            Ad267
+      %footer
+        #footer
+          %p
+            %strike<
+              &copy; Copyright.
+            Copyleft David Moreno 2010. No Rights Reserved.
+            %br
+            Valid
+            %a{:href => "http://validator.w3.org/check?uri=referer", :target => "_blank"}
+              HTML5
+            and
+            %a{:href => "http://jigsaw.w3.org/css-validator/check/referer", :target => "_blank"}
+              CSS3
+            · Template design by 
+            %a{:href => "http://www.opendesigns.org/profile/?user=ad267"}
+              Ad267
+            %br
+            = link_to "Linuxonrails.com", 'http://www.linuxonrails.com'
+            
 
