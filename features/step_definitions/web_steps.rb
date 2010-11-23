@@ -214,6 +214,10 @@ Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   end
 end
 
+Then /^I should see "([^"]*)" option in navigation menu$/ do |option|
+  And "I should see \"#{option}\" within \"ul#nav\""
+end
+
 Then /^show me the page$/ do
   save_and_open_page
 end
@@ -224,3 +228,8 @@ Then /^debug$/ do
     puts "DEBUG: " + post.inspect
   end
 end
+
+Then /^\#(.*)$/ do |arg1|
+  # nothing to do
+end
+

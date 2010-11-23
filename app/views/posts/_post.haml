@@ -1,12 +1,20 @@
 %article
   %h2
     = link_to post.title, post
-  %p
+
+  %p.float-left
+    %strong
+      Tags:
+    Ninguno de momento :-)
+
+  %p.float-right
     / %span.author
     /   by
     /   = post.author.name
     %span.published_on
-      = post.published_on.strftime("%d.%m.%Y") 
+      = post.published_on.strftime("%e.%-m.%Y") 
+      
+  .clear-both    
       
   %p.post-body
     = post.body[0..50]

@@ -1,14 +1,17 @@
 %article
-  %h2
+  %h2.float-left
     = post.title
+    
       
-  .any
+  .float-right
     %span.author
       by
       = # post.author.name
     %span.published_on
       on
       = # post.published_on.strftime("%b %d, %Y") 
+
+  .clear-both    
       
   %p.teaser
     = # post.teaser
