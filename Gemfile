@@ -17,6 +17,8 @@ gem 'rspec-rails'
 gem 'spork'
 gem 'launchy'
 
+gem 'factory_girl'
+
 gem 'haml'
 
 # Use unicorn as the web server
